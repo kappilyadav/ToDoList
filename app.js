@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+require("dotenv").config();
 
 
 const app = express();
@@ -12,7 +13,7 @@ app.set("view engine", "ejs");
 
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb://127.0.0.1/todolistDB", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGOURL + "/todolistDB", { useNewUrlParser: true });
 
 
 
