@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 
 
 mongoose.set('strictQuery', false);
-mongoose.connect(process.env.MONGOURL + "/todolistDB", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGOURL + "/todolisttDB", { useNewUrlParser: true });
 
 
 
